@@ -22,7 +22,7 @@ public class Mapper {
         getItemsByIdResponse = GenericBuilder.of(
                 MercadolibreServiceResponse::new).with(MercadolibreServiceResponse::setCode, (Integer) code)
                 .with(MercadolibreServiceResponse::setTitle, String.valueOf(body.get("title")))
-                .with(MercadolibreServiceResponse::setPrice, Float.parseFloat(String.valueOf(body.get("price"))))
+                .with(MercadolibreServiceResponse::setPrice, Math.round(Float.parseFloat(String.valueOf(body.get("price"))) * 100f) / 100f)
                 .with(MercadolibreServiceResponse::setSiteId, String.valueOf(body.get("id"))).build();
 
         return getItemsByIdResponse;

@@ -124,12 +124,5 @@ public class Utils {
         return total;
     }
 
-   /* public static List<ListItemsRR> removeItems (List<ListItemsRR>  listItems) {
-
-        for (ListItemsRR listItemsRR: listItems) {
-            if(listItemsRR.ge)
-        }
-
-    }*/
 
 }
